@@ -326,122 +326,6 @@
 				"Other",
 				"Tools"
 			],
-			"description": "Web File Browser which can be used as a middleware or standalone app.",
-			"image": "filebrowser/filebrowser:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/filebrowser.png",
-			"name": "filebrowser-latest",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://filebrowser.org/\" target=\"_blank\">https://filebrowser.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://filebrowser.org/installation#docker\" target=\"_blank\">https://filebrowser.org/installation#docker</a><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=30MYRgCObu8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=4 target=\"_blank\">Novaspirit Tech - Installing JDownloader and File Browser On The Pi Docker Server</a><br><br>The default user and password is admin/admin.",
-			"platform": "linux",
-			"ports": [
-				"8082:80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "FileBrowser latest",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/portainer/Downloads",
-					"container": "/srv"
-				},
-				{
-					"bind": "/home/kevin/Documents/Portainer/filebrowser/filebrowser.db",
-					"container": "/database/filebrowser.db"
-				},
-				{
-					"bind": "/home/kevin/Documents/Portainer/filebrowser/settings.json",
-					"container": "/config/settings.json"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "[arm][s6-version] Web File Browser which can be used as a middleware or standalone app.",
-			"image": "filebrowser/filebrowser:s6",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/filebrowser.png",
-			"name": "filebrowser",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://filebrowser.org/\" target=\"_blank\">https://filebrowser.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://filebrowser.org/installation#docker\" target=\"_blank\">https://filebrowser.org/installation#docker</a><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=30MYRgCObu8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=4 target=\"_blank\">Novaspirit Tech - Installing JDownloader and File Browser On The Pi Docker Server</a><br><br>The default user and password is admin/admin.",
-			"platform": "linux",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"ports": [
-				"8082:80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "FileBrowser S6",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/portainer/Downloads",
-					"container": "/srv"
-				},
-				{
-					"bind": "/home/kevin/Documents/Portainer/filebrowser/filebrowser.db",
-					"container": "/database/filebrowser.db"
-				},
-				{
-					"bind": "/home/kevin/Documents/Portainer/filebrowser/settings.json",
-					"container": "/config/settings.json"
-				}
-			]
-		},
-		{
-			"categories": [
-				"tools"
-			],
-			"description": "Crunch numbers for scientists. just click deploy the stack, IMPORTANT!!! make sure you use firefox to open the site.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "lscr.io/linuxserver/foldingathome:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/folding-at-home-logo.png",
-			"name": "FoldingAtHome",
-			"platform": "linux",
-			"ports": [
-				"7396:7396/tcp",
-				"36330:36300/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "FoldingAtHome",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/FoldingAthome/config",
-					"container": "/config"
-				},
-				{
-					"bind": "/home/kevin/Documents/Portainer/FoldingAtHome/data",
-					"container": "/data"
-				}
-			],
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://foldingathome.org/?lng=en\" target=\"_blank\">https://foldingathome.org/?lng=en</a><br><br><br>"
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
 			"description": "Ghost is a free and open source blogging platform written in JavaScript and distributed under the MIT License, designed to simplify the process of online publishing for individual bloggers as well as online publications.",
 			"env": [
 				{
@@ -475,106 +359,6 @@
 		},
 		{
 			"categories": [
-				"SCM",
-				"Tools"
-			],
-			"description": "A painless self-hosted Git service.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "USER_UID",
-					"name": "USER_UID"
-				},
-				{
-					"default": "1000",
-					"label": "USER_GID",
-					"name": "USER_GID"
-				}
-			],
-			"image": "gitea/gitea:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/gitea.png",
-			"name": "gitea",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://gitea.com/\" target=\"_blank\">https://gitea.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.gitea.io/en-us/install-with-docker/\" target=\"_blank\">https://docs.gitea.io/en-us/install-with-docker/</a><br><br><br>More possible Environment Variables: https://docs.gitea.io/en-us/install-with-docker/#managing-deployments-with-environment-variables",
-			"platform": "linux",
-			"ports": [
-				"8124:3000/tcp",
-				"222:22/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Gitea",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/Gitea",
-					"container": "/data"
-				},
-				{
-					"bind": "/etc/timezone",
-					"container": "/etc/timezone:ro"
-				},
-				{
-					"bind": "/etc/localtime",
-					"container": "/etc/localtime:ro"
-				}
-			]
-		},
-		{
-			"categories": [
-				"SCM",
-				"Tools"
-			],
-			"description": "Gitea with Mariadb: A painless self-hosted Git service.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "USER_UID",
-					"name": "USER_UID"
-				},
-				{
-					"default": "1000",
-					"label": "USER_GID",
-					"name": "USER_GID"
-				},
-				{
-					"default": "America/New_York",
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"default": "gitea",
-					"label": "DATABASE_NAME",
-					"name": "DATABASE_NAME"
-				},
-				{
-					"default": "gitea",
-					"label": "DATABASE_USER",
-					"name": "DATABASE_USER"
-				},
-				{
-					"default": "",
-					"label": "DATABASE_PASSWORD",
-					"name": "DATABASE_PASSWORD"
-				},
-				{
-					"default": "",
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD"
-				}
-			],
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/gitea.png",
-			"name": "gitea-mysql",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://gitea.com/\" target=\"_blank\">https://gitea.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.gitea.io/en-us/install-with-docker/#mysql-database\" target=\"_blank\">https://docs.gitea.io/en-us/install-with-docker/#mysql-database</a><br><br><br>More possible Environment Variables: https://docs.gitea.io/en-us/install-with-docker/#managing-deployments-with-environment-variables",
-			"platform": "linux",
-			"repository": {
-				"stackfile": "stack/gitea-mariadb.yml",
-				"url": "https://github.com/pi-hosted/pi-hosted/"
-			},
-			"restart_policy": "unless-stopped",
-			"title": "Gitea with Mariadb",
-			"type": 3
-		},
-		{
-			"categories": [
 				"Monitor",
 				"Tools"
 			],
@@ -593,30 +377,6 @@
 			"title": "Grafana",
 			"type": 3,
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://grafana.com/grafana/\" target=\"_blank\">https://grafana.com/grafana/</a><br><b>Official Docker Documentation: </b><a href=\"https://grafana.com/docs/grafana/v9.0/setup-grafana/installation/docker/\" target=\"_blank\">https://grafana.com/docs/grafana/v9.0/setup-grafana/installation/docker/</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_grafana.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_grafana.sh | bash</h3><br><br>"
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "A clientless remote desktop gateway.",
-			"image": "maxwaldorf/guacamole:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/guacamole.png",
-			"name": "guacamole",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://guacamole.apache.org/\" target=\"_blank\">https://guacamole.apache.org/</a><br><b>Official Docker Documentation: </b><a href=\"https://hub.docker.com/r/oznu/guacamole\" target=\"_blank\">https://hub.docker.com/r/oznu/guacamole</a><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=cKAhnf8X1lo&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=3 target=\"_blank\">Novaspirit Tech - Manually Installing Guacamole on Portainer</a><br><br>The default login will be guacadmin/guacadmin. It is common practice to add a new admin user and remove the default user for Guacamole.",
-			"platform": "linux",
-			"ports": [
-				"8080:8080/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Guacamole",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/Guacamole",
-					"container": "/config"
-				}
-			]
 		},
 		{
 			"categories": [
@@ -759,30 +519,6 @@
 				"Other",
 				"Tools"
 			],
-			"description": "Create agents that monitor and act on your behalf.",
-			"image": "mjysci/huginn:arm32v7",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/huginn.png",
-			"name": "huginn",
-			"platform": "linux",
-			"ports": [
-				"3005:3000/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Huginn",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/huginn",
-					"container": "/var/lib/mysql"
-				}
-			],
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/huginn/huginn\" target=\"_blank\">https://github.com/huginn/huginn</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/huginn/huginn/tree/master/docker\" target=\"_blank\">https://github.com/huginn/huginn/tree/master/docker</a><br><br><br>"
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
 			"description": "InfluxDB is an open source time series database for recording metrics, events, and analytics.",
 			"hostname": "rpi-influxdb1810",
 			"image": "influxdb:1.8.10",
@@ -862,30 +598,6 @@
 					"container": "/etc/influxdb2"
 				}
 			]
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "An alternative private front-end to Reddit",
-			"image": "libreddit/libreddit:arm",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/libreddit.png",
-			"name": "libreddit",
-			"platform": "linux",
-			"ports": [
-				"8088:8080/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "libreddit",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/libreddit",
-					"container": "/config"
-				}
-			],
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://libreddit.silkky.cloud/\" target=\"_blank\">https://libreddit.silkky.cloud/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/spikecodes/libreddit#2-docker\" target=\"_blank\">https://github.com/spikecodes/libreddit#2-docker</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -1280,95 +992,6 @@
 		},
 		{
 			"categories": [
-				"Cloud",
-				"Productivity",
-				"Tools",
-				"Other",
-				"Web"
-			],
-			"description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				},
-				{
-					"default": "America/New_York",
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"label": "DATABASE_PASSWORD",
-					"name": "DATABASE_PASSWORD"
-				},
-				{
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD"
-				},
-				{
-					"label": "PORT",
-					"name": "PORT"
-				}
-			],
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nextcloud-icon.png",
-			"name": "nextcloud",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://nextcloud.com/\" target=\"_blank\">https://nextcloud.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-nextcloud\" target=\"_blank\">https://docs.linuxserver.io/images/docker-nextcloud</a><br><br><br>The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
-			"platform": "linux",
-			"repository": {
-				"stackfile": "stack/nextcloud.yml",
-				"url": "https://github.com/pi-hosted/pi-hosted"
-			},
-			"title": "Nextcloud",
-			"type": 3
-		},
-		{
-			"categories": [
-				"Cloud",
-				"Productivity",
-				"Tools",
-				"Other",
-				"Web"
-			],
-			"description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "ownyourbits/nextcloudpi-arm64:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nextcloud-icon.png",
-			"name": "nextcloudpi",
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://ownyourbits.com/nextcloudpi/\" target=\"_blank\">https://ownyourbits.com/nextcloudpi/</a><br><b>Official Docker Documentation: </b><a href=\"https://ownyourbits.com/2017/06/08/nextcloudpi-docker-for-raspberry-pi/\" target=\"_blank\">https://ownyourbits.com/2017/06/08/nextcloudpi-docker-for-raspberry-pi/</a><br><br><b>Extra useful script: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/reset_premissions_nextcloud.sh\" target=\"_blank\">reset_premissions_nextcloud.sh</a><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=E6IrT3g5Gqc&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=9 target=\"_blank\">Novaspirit Tech - Installing Nextcloud on Raspberry Pi Docker</a><br><br>The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
-			"platform": "linux",
-			"ports": [
-				"4444:4443/tcp",
-				"8443:443/tcp",
-				"8480:8480/tcp"
-			],
-			"title": "NextcloudPi",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/ncdata",
-					"container": "/data"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Web",
 				"Proxy"
 			],
@@ -1515,25 +1138,6 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://nginxproxymanager.com/\" target=\"_blank\">https://nginxproxymanager.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://nginxproxymanager.com/setup/\" target=\"_blank\">https://nginxproxymanager.com/setup/</a><br><h3><b>Pi-Hosted dedicated documentation: </b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/docs/nginx_proxy_manager.md\" target=\"_blank\">nginx_proxy_manager.md</a></h3><br><br><br><b>Youtube Video: </b><a href=https://www.youtube.com/watch?v=yl2Laxbqvo8&list=PL846hFPMqg3jwkxcScD1xw2bKXrJVvarc&index=10 target=\"_blank\">Novaspirit Tech - Installing Nginx Proxy Manager on Docker</a><br><br>"
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools",
-				"Web"
-			],
-			"description": "A free and open source alternative Twitter front-end focused on privacy and performance.",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/nitter.png",
-			"name": "nitter",
-			"repository": {
-				"stackfile": "stack/nitter.yml",
-				"url": "https://github.com/pi-hosted/pi-hosted/"
-			},
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "Nitter",
-			"type": 3,
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://nitter.net/\" target=\"_blank\">https://nitter.net/</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/zedeus/nitter\" target=\"_blank\">https://github.com/zedeus/nitter</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -1877,49 +1481,6 @@
 			},
 			"title": "PhotoPrism",
 			"type": 3
-		},
-		{
-			"categories": [
-				"Photos"
-			],
-			"description": "A simple, easy way to turn a photo album into a webgallery",
-			"env": [
-				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1000",
-					"label": "PGID",
-					"name": "PGID"
-				}
-			],
-			"image": "linuxserver/photoshow:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/photoshow-icon.png",
-			"name": "photoshow",
-			"platform": "linux",
-			"ports": [
-				"7380:80/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "PhotoShow",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/portainer/Pictures",
-					"container": "/Pictures"
-				},
-				{
-					"bind": "/portainer/Files/AppData/Photoshow/Thumbs",
-					"container": "/Thumbs"
-				},
-				{
-					"bind": "/home/kevin/Documents/Portainer/PhotoShow",
-					"container": "/config"
-				}
-			],
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/thibaud-rohmer/PhotoShow\" target=\"_blank\">https://github.com/thibaud-rohmer/PhotoShow</a><br><b>Official Docker Documentation: </b><a href=\"https://docs.linuxserver.io/images/docker-photoshow\" target=\"_blank\">https://docs.linuxserver.io/images/docker-photoshow</a><br><br><br>"
 		},
 		{
 			"categories": [
@@ -2395,30 +1956,6 @@
 				}
 			],
 			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/henrywhitaker3/Speedtest-Tracker\" target=\"_blank\">https://github.com/henrywhitaker3/Speedtest-Tracker</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/henrywhitaker3/Speedtest-Tracker#using-docker\" target=\"_blank\">https://github.com/henrywhitaker3/Speedtest-Tracker#using-docker</a><br><br><br>"
-		},
-		{
-			"categories": [
-				"Other",
-				"Tools"
-			],
-			"description": "A unique, non-linear notebook wiki.",
-			"image": "nicolaw/tiddlywiki:latest",
-			"logo": "https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/tiddlywiki.png",
-			"name": "tiddlywiki",
-			"platform": "linux",
-			"ports": [
-				"8080:8080/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "TiddlyWiki",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/home/kevin/Documents/Portainer/TiddlyWiki",
-					"container": "/var/lib/tiddlywiki"
-				}
-			],
-			"note": "<b>Template created by Pi-Hosted Series</b><br><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://tiddlywiki.com/\" target=\"_blank\">https://tiddlywiki.com/</a><br><b>Official Docker Documentation: </b><a href=\"https://gitlab.com/nicolaw/tiddlywiki\" target=\"_blank\">https://gitlab.com/nicolaw/tiddlywiki</a><br><br><h3><b><a href=\"https://github.com/pi-hosted/pi-hosted/blob/master/tools/install_tiddlywiki.sh\" target=\"_blank\">Pre-installation script</a> must be RAN before you install: </b>wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/tools/install_tiddlywiki.sh | bash</h3><br><br>"
 		},
 		{
 			"categories": [
