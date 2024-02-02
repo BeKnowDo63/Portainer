@@ -1671,7 +1671,7 @@
 			"description": "Monitor your Raspberry Pi and Dockers using Grafana developed by oijkn. Please download grafana configs from his git https://github.com/oijkn/Docker-Raspberry-PI-Monitoring",
 			"env": [
 				{
-					"default": "15d",
+					"default": "60d",
 					"label": "PROMETHEUS_RETENTION",
 					"name": "PROMETHEUS_RETENTION"
 				}
