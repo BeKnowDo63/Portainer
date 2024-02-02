@@ -1683,8 +1683,8 @@
 				"3000:3000/tcp"
 			],
 			"repository": {
-				"stackfile": "stack/raspberrypi-monitoring.yml",
-				"url": "https://github.com/pi-hosted/pi-hosted"
+				"stackfile": "raspberrypi-monitoring.yml",
+				"url": "https://github.com/BeKnowDo63/Portainer"
 			},
 			"restart_policy": "unless-stopped",
 			"title": "Raspberry Pi Docker Monitor",
