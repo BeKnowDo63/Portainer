@@ -48,9 +48,9 @@ services:
     restart: unless-stopped
     volumes:
       # to be modified depending on your needs
-      - /portainer/Files/AppData/Config/grafana/data:/var/lib/grafana
-      - /portainer/Files/AppData/Config/grafana/grafana.ini:/etc/grafana/grafana.ini
-      - /portainer/Files/AppData/Config/grafana/provisioning:/etc/grafana/provisioning
+      - /home/kevin/Documents/Portainer/grafana/data:/var/lib/grafana
+      - /home/kevin/Documents/Portainer/grafana/grafana.ini:/etc/grafana/grafana.ini
+      - /home/kevin/Documents/Portainer/grafana/provisioning:/etc/grafana/provisioning
 
   node-exporter:
     container_name: monitoring-node-exporter
@@ -66,7 +66,7 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
-      - '--storage.tsdb.retention.time=${PROMETHEUS_RETENTION:-15d}'
+      - '--storage.tsdb.retention.time=${PROMETHEUS_RETENTION:-60d}'
     container_name: monitoring-prometheus
     expose:
       - 9090
@@ -78,8 +78,8 @@ services:
     restart: unless-stopped
     volumes:
       # to be modified depending on your needs
-      - /portainer/Files/AppData/Config/prometheus/data:/prometheus
-      - /portainer/Files/AppData/Config/prometheus/config:/etc/prometheus/
+      - /home/kevin/Documents/Portainer/prometheus/data:/prometheus
+      - /home/kevin/Documents/Portainer/prometheus/config:/etc/prometheus/
     links:
       - cadvisor:cadvisor
       - node-exporter:node-exporter
